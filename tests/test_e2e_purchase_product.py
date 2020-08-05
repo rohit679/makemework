@@ -115,12 +115,6 @@ def test_e2e_weather_shopper(base_url,browser,browser_version,os_version,os_name
         negative="Pay button successfully not clicked",
         level="critical")
 
-
-
-
-
-
-
         #Print out the results
         test_obj.write_test_summary()
 

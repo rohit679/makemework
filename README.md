@@ -1,4 +1,5 @@
 # Make me work!
+
 Fix the issues in this repo and make this program work. This repository is aimed at folks who have already learnt to *write* basic Python but are looking for more realistic challenges that involve reading a large enough codebase, exploring file structures and making changes to an existing codebase. 
 
 The code you are going to run is a Selenium test for the [Weather Shopper](http://weathershopper.pythonanywhere.com/) application. The automated test itself completes the [weather shopper exercise](https://github.com/qxf2/weather-shopper). Your job is to fix the problems in the automated test and make it run successfully. 
