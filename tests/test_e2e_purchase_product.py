@@ -19,11 +19,9 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from page_objects.PageFactory import PageFactory
 
 
-
 def test_e2e_weather_shopper(base_url, browser, browser_version, os_version, os_name,\
                              remote_flag, testrail_flag, tesults_flag, test_run_id,\
                              remote_project_name, remote_build_name):
-
     "Run the test"
     try:
         #Initalize flags for tests summary
@@ -69,6 +67,7 @@ def test_e2e_weather_shopper(base_url, browser, browser_version, os_version, os_
                                 %(cheapest_product.name, filter_condition), negative="Could \
                                 not add the cheapest product '%s' with '%s'"\
                                 %(cheapest_product.name, filter_condition))
+
         #Go to the cart
         result_flag = test_obj.go_to_cart()
         test_obj.log_result(result_flag,
@@ -92,31 +91,31 @@ def test_e2e_weather_shopper(base_url, browser, browser_version, os_version, os_
                             negative="Automation is not on the payment form",
                             level="critical")
 
-        result_flag = test_obj.set_email("rohit133@gmail.com")
+        result_flag = test_obj.set_email()
         test_obj.log_result(result_flag,
                             positive="Email successfully filled",
                             negative="Email successfully not filled",
                             level="critical")
 
-        result_flag = test_obj.set_account_number("6011000990139424")
+        result_flag = test_obj.set_account_number()
         test_obj.log_result(result_flag,
                             positive="Account number successfully filled",
                             negative="Account number successfully not filled",
                             level="critical")
 
-        result_flag = test_obj.set_expiry_date("0322")
+        result_flag = test_obj.set_expiry_date()
         test_obj.log_result(result_flag,
                             positive="Expiry date successfully filled",
                             negative="Expiry date successfully not filled",
                             level="critical")
 
-        result_flag = test_obj.set_cvv("123")
+        result_flag = test_obj.set_cvv()
         test_obj.log_result(result_flag,
                             positive="Cvv successfully filled",
                             negative="Cvv successfully not filled",
                             level="critical")
 
-        result_flag = test_obj.set_zip_code("123456")
+        result_flag = test_obj.set_zip_code()
         test_obj.log_result(result_flag,
                             positive="Zip code successfully filled",
                             negative="Zip code successfully not filled",

@@ -11,6 +11,13 @@ class Payment_Page(Base_Page):
     FORM_REMEMBER_ME = locators.FORM_REMEMBER_ME
     FORM_MOBILE = locators.FORM_MOBILE
     FORM_SUBMIT = locators.FORM_SUBMIT
+    EMAIL_ID = locators.EMAIL_ID
+    ACCOUNT_NUMBER = locators.ACCOUNT_NUMBER
+    EXPIRY_DATE = locators.EXPIRY_DATE
+    CVV = locators.CVV
+    ZIP_CODE = locators.ZIP_CODE
+    REMEMBER_ME = locators.REMEMBER_ME
+    MOBILE = locators.MOBILE
 
     def start(self):
         "Switching to payment iframe"
@@ -28,66 +35,66 @@ class Payment_Page(Base_Page):
         return result_flag
 
     @Wrapit._exceptionHandler
-    def set_email(self,email):
+    def set_email(self):
         "Set the email on the form"
-        result_flag = self.set_text(self.FORM_EMAIL_ID,email)
+        result_flag = self.set_text(self.FORM_EMAIL_ID, self.EMAIL_ID)
         self.conditional_write(result_flag,
-            positive='Set the email to: %s'%email,
+            positive='Set the email to: {}'.format(self.EMAIL_ID),
             negative='Failed to set the email in the form',
             level='debug')
 
         return result_flag
 
     @Wrapit._exceptionHandler
-    def set_account_number(self,account_number):
+    def set_account_number(self):
         "Set the account number on the form"
-        result_flag = self.set_text(self.FORM_ACCOUNT_NUMBER,account_number)
+        result_flag = self.set_text(self.FORM_ACCOUNT_NUMBER, self.ACCOUNT_NUMBER)
         self.conditional_write(result_flag,
-            positive='Set the account number to: %s'%account_number,
+            positive='Set the account number to: {}'.format(self.ACCOUNT_NUMBER),
             negative='Failed to set the account number in the form',
             level='debug')
 
         return result_flag
 
     @Wrapit._exceptionHandler
-    def set_expiry_date(self,expiry_date):
+    def set_expiry_date(self):
         "Set the expiry date on the form"
-        result_flag = self.set_text(self.FORM_EXPIRY_DATE,expiry_date)
+        result_flag = self.set_text(self.FORM_EXPIRY_DATE, self.EXPIRY_DATE)
         self.conditional_write(result_flag,
-            positive='Set the expiry date to: %s'%expiry_date,
+            positive='Set the expiry date to: {}'.format(self.EXPIRY_DATE),
             negative='Failed to set the expiry date in the form',
             level='debug')
 
         return result_flag
 
     @Wrapit._exceptionHandler
-    def set_cvv(self,cvv):
+    def set_cvv(self):
         "Set the cvv on the form"
-        result_flag = self.set_text(self.FORM_CVV,cvv)
+        result_flag = self.set_text(self.FORM_CVV, self.CVV)
         self.conditional_write(result_flag,
-            positive='Set the cvv to: %s'%cvv,
+            positive='Set the cvv to: {}'.format(self.CVV),
             negative='Failed to set the cvv in the form',
             level='debug')
 
         return result_flag
 
     @Wrapit._exceptionHandler
-    def set_zip_code(self,zip_code):
+    def set_zip_code(self):
         "Set the zip code on the form"
-        result_flag = self.set_text(self.FORM_ZIP_CODE,zip_code)
+        result_flag = self.set_text(self.FORM_ZIP_CODE, self.ZIP_CODE)
         self.conditional_write(result_flag,
-            positive='Set the zip code to: %s'%zip_code,
+            positive='Set the zip code to: {}'.format(self.ZIP_CODE),
             negative='Failed to set the zip code in the form',
             level='debug')
 
         return result_flag
 
     @Wrapit._exceptionHandler
-    def set_mobile(self,mobile):
+    def set_mobile(self):
         "Set the mobile number on the form"
-        result_flag = self.set_text(self.FORM_MOBILE,mobile)
+        result_flag = self.set_text(self.FORM_MOBILE, self.MOBILE)
         self.conditional_write(result_flag,
-            positive='Set the mobile number to: %s'%mobile,
+            positive='Set the mobile number to: {}'.format(self.MOBILE),
             negative='Failed to set the mobile number in the form',
             level='debug')
 

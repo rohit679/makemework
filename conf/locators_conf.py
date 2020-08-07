@@ -40,3 +40,12 @@ FORM_ZIP_CODE = "xpath,//input[contains(@placeholder,'ZIP Code')]"
 FORM_REMEMBER_ME = "xpath,//div[@class='Checkbox-tick']"
 FORM_MOBILE = "xpath,//input[@type='tel' and @autocomplete='mobile tel']"
 FORM_SUBMIT = "xpath,//button[@type='submit']"
+
+#Personal data
+EMAIL_ID = "rohit.prasad@qxf2.com"
+ACCOUNT_NUMBER = "6011000990139424"
+EXPIRY_DATE = "0325"
+CVV = "123"
+ZIP_CODE = "711101"
+REMEMBER_ME = "Yes"
+MOBILE = "9134543234"
