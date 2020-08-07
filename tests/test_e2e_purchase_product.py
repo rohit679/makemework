@@ -123,8 +123,10 @@ def test_e2e_weather_shopper(base_url, browser, browser_version, os_version, os_
 
         result_flag = test_obj.click_submit_button()
         test_obj.log_result(result_flag,
-                            positive="Pay button successfully clicked",
-                            negative="Pay button successfully not clicked",
+                            positive="Pay button successfully clicked,\
+                            Automation is on the payment success page",
+                            negative="Pay button successfully not clicked,\
+                            Automation is not on the payment success page",
                             level="critical")
 
         #Print out the results
