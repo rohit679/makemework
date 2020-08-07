@@ -1,6 +1,5 @@
 """
 This is a broadstack test for Weather Shopper.
-
 This test will:
 a) visit the main page
 b) get the temperature
