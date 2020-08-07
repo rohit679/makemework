@@ -94,40 +94,34 @@ def test_e2e_weather_shopper(base_url, browser, browser_version, os_version,
         result_flag = test_obj.set_email()
         test_obj.log_result(result_flag,
                             positive="Email successfully filled",
-                            negative="Email successfully not filled",
-                            level="critical")
+                            negative="Email successfully not filled")
 
         result_flag = test_obj.set_account_number()
         test_obj.log_result(result_flag,
                             positive="Account number successfully filled",
-                            negative="Account number successfully not filled",
-                            level="critical")
+                            negative="Account number successfully not filled")
 
         result_flag = test_obj.set_expiry_date()
         test_obj.log_result(result_flag,
                             positive="Expiry date successfully filled",
-                            negative="Expiry date successfully not filled",
-                            level="critical")
+                            negative="Expiry date successfully not filled")
 
         result_flag = test_obj.set_cvv()
         test_obj.log_result(result_flag,
                             positive="Cvv successfully filled",
-                            negative="Cvv successfully not filled",
-                            level="critical")
+                            negative="Cvv successfully not filled")
 
         result_flag = test_obj.set_zip_code()
         test_obj.log_result(result_flag,
                             positive="Zip code successfully filled",
-                            negative="Zip code successfully not filled",
-                            level="critical")
+                            negative="Zip code successfully not filled")
 
         result_flag = test_obj.click_submit_button()
         test_obj.log_result(result_flag,
                             positive="Pay button successfully clicked,\
                             Automation is on the payment success page",
                             negative="Pay button successfully not clicked,\
-                            Automation is not on the payment success page",
-                            level="critical")
+                            Automation is not on the payment success page")
 
         #Print out the results
         test_obj.write_test_summary()
