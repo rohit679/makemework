@@ -14,14 +14,15 @@ import os
 import sys
 import time
 import conf.e2e_weather_shopper_conf as conf
-from utils.Option_Parser import Option_Parser
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from page_objects.PageFactory import PageFactory
+from utils.Option_Parser import Option_Parser
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-def test_e2e_weather_shopper(base_url, browser, browser_version, os_version, os_name,\
-                             remote_flag, testrail_flag, tesults_flag, test_run_id,\
-                             remote_project_name, remote_build_name):
+def test_e2e_weather_shopper(base_url, browser, browser_version, os_version,
+                             os_name, remote_flag, testrail_flag, tesults_flag,
+                             test_run_id, remote_project_name,
+                             remote_build_name):
     "Run the test"
     try:
         #Initalize flags for tests summary
@@ -131,7 +132,6 @@ def test_e2e_weather_shopper(base_url, browser, browser_version, os_version, os_
 
         #Print out the results
         test_obj.write_test_summary()
-
         #Teardown
         test_obj.wait(3)
         expected_pass = test_obj.result_counter
