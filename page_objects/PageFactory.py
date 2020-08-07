@@ -26,6 +26,8 @@ class PageFactory():
             test_obj = Cart_Page(base_url=base_url,trailing_slash_flag=trailing_slash_flag)
         elif page_name in ["payment","payments"]:
             test_obj = Payment_Page()
+        elif page_name in ["payment","payments"]:
+            test_obj = Payment_Page()
         return test_obj
 
     get_page_object = staticmethod(get_page_object)
