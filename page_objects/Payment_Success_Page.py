@@ -1,3 +1,7 @@
+"""
+    This Object models the product page.
+"""
+
 from .Base_Page import Base_Page
 from utils.Wrapit import Wrapit
 import conf.locators_conf as locators
